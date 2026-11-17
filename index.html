@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Dilara Hoca ile Online Geometri Dersleri (TYT-AYT) | HD Geometri</title>
+<meta name="description" content="TYT-AYT geometri için birebir online ders, kamp ve konu paketleri. Dilara Hoca ile şekli okumayı, doğru bağlantıyı kurmayı ve netleri kalıcı artırmayı öğrenin.">
+<meta property="og:title" content="HD Geometri · Dilara Hoca">
+<meta property="og:description" content="Geometriyi ezberleme, şekli okumayı öğren. Birebir ve grup online dersler, kamplar.">
+<meta property="og:image" content="img/dilara.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231e1a3a'/%3E%3Cpath d='M16 6 27 25H5Z' fill='none' stroke='%23f6f3ec' stroke-width='2.4' stroke-linejoin='round'/%3E%3Ccircle cx='16' cy='6' r='2.4' fill='%23d6493c'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=Caveat:wght@600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f6f3ec; --paper-2:#efebe1; --line:#ddd7ca;
+  --ink:#1e1a3a; --ink-2:#4a4566; --ink-3:#6f6a86;
+  --indigo:#4a35b0; --indigo-soft:#e7e3f6;
+  --pen:#d6493c;
+  --grid:rgba(74,53,176,.07);
+  --display:"Bricolage Grotesque",system-ui,sans-serif;
+  --body:"Instrument Sans",system-ui,sans-serif;
+  --hand:"Caveat",cursive;
+  --mono:"JetBrains Mono",ui-monospace,monospace;
+  --wrap:1200px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.65 var(--body);
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:28px 28px}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);line-height:1.04;letter-spacing:-.025em;margin:0;text-wrap:balance}
+p{margin:0 0 1em;text-wrap:pretty}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:var(--paper);padding:8px 14px;border-radius:6px;z-index:30}
+.skip:focus{left:12px}
+:focus-visible{outline:3px solid var(--pen);outline-offset:3px;border-radius:4px}
+
+.tag{font:500 12.5px/1 var(--mono);letter-spacing:.04em;color:var(--ink-3);display:inline-flex;gap:10px;align-items:center}
+.tag b{color:var(--paper);background:var(--ink);padding:5px 8px;border-radius:4px;font-weight:500}
+.hand{font-family:var(--hand);color:var(--pen);font-weight:700;line-height:1}
+
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 22px;border-radius:10px;font:600 16px var(--body);text-decoration:none;border:2px solid var(--ink);cursor:pointer;transition:transform .16s ease,background-color .2s ease,color .2s ease}
+.btn:active{transform:scale(.97)}
+.btn-ink{background:var(--ink);color:var(--paper)}
+.btn-ink:hover{background:var(--indigo);border-color:var(--indigo)}
+.btn-line{background:transparent;color:var(--ink)}
+.btn-line:hover{background:var(--ink);color:var(--paper)}
+.btn svg{width:18px;height:18px}
+
+/* üst çubuk */
+header.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font:800 19px var(--display);letter-spacing:-.02em}
+.brand svg{width:34px;height:34px}
+.brand small{display:block;font:500 12px var(--mono);color:var(--ink-3);letter-spacing:0}
+nav.main{display:flex;gap:4px;align-items:center}
+nav.main a{text-decoration:none;font-weight:500;padding:10px 12px;border-radius:8px;color:var(--ink-2)}
+nav.main a:hover{color:var(--ink);background:var(--paper-2)}
+nav.main a.btn{color:var(--paper);margin-left:8px;min-height:42px;padding:0 16px}
+nav.main a.btn:hover{background:var(--indigo)}
+.menu-btn{display:none}
+
+/* hero */
+.hero{padding:56px 0 40px}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(42px,6.4vw,84px);font-weight:800;margin:18px 0 22px}
+.hero h1 em{font-style:normal;color:var(--indigo);position:relative;white-space:nowrap}
+.hero h1 em::after{content:"";position:absolute;left:-2%;right:-2%;bottom:.02em;height:.16em;background:var(--pen);opacity:.85;border-radius:4px;transform:rotate(-1deg);z-index:-1}
+.hero .lead{font-size:19px;color:var(--ink-2);max-width:34em}
+.hero .acts{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.figure{position:relative}
+.figure svg{width:100%;height:auto;overflow:visible}
+.draw{stroke-dasharray:1200;stroke-dashoffset:1200;animation:ciz 1.6s cubic-bezier(.6,.1,.2,1) forwards}
+.d2{animation-delay:.9s;animation-duration:.9s}.d3{animation-delay:1.5s;animation-duration:.7s}.d4{animation-delay:2s;animation-duration:.8s}
+.pop{opacity:0;animation:belir .5s ease forwards;animation-delay:2.4s}
+@keyframes ciz{to{stroke-dashoffset:0}}
+@keyframes belir{to{opacity:1}}
+
+/* soru şıkları */
+.quiz{margin-top:8px;padding:28px 0 64px}
+.quiz-card{background:#fffdf8;border:1.5px solid var(--ink);border-radius:16px;padding:28px;box-shadow:6px 6px 0 var(--ink);display:grid;grid-template-columns:260px 1fr;gap:28px}
+.quiz-card h2{font-size:28px}
+.quiz-card .q p{color:var(--ink-3);font-size:15px;margin-top:10px}
+.opts{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;list-style:none;margin:0;padding:0}
+.opts button{width:100%;text-align:left;display:flex;gap:14px;align-items:center;min-height:56px;padding:12px 14px;border:1.5px solid var(--line);background:var(--paper);border-radius:10px;font:500 16px var(--body);color:var(--ink);cursor:pointer;transition:border-color .2s,background-color .2s,transform .16s}
+.opts button:hover{border-color:var(--ink)}
+.opts button:active{transform:scale(.98)}
+.opts .harf{flex:none;width:32px;height:32px;display:grid;place-items:center;border-radius:50%;border:1.5px solid var(--ink-3);font:500 14px var(--mono);position:relative}
+.opts button[aria-pressed=true]{border-color:var(--ink);background:#fff}
+.opts button[aria-pressed=true] .harf{border-color:transparent}
+.opts button[aria-pressed=true] .harf::after{content:"";position:absolute;inset:-6px;border:2.5px solid var(--pen);border-radius:50% 45% 52% 48%;transform:rotate(-8deg)}
+.answer{grid-column:2;min-height:28px;margin:4px 0 0;display:flex;flex-wrap:wrap;gap:6px 14px;align-items:baseline}
+.answer .hand{font-size:28px}
+.answer a{font-weight:600}
+
+/* bölüm başlığı */
+section{scroll-margin-top:80px}
+.sec{padding:96px 0 104px}
+.sec-head{display:grid;grid-template-columns:200px 1fr;gap:24px;margin-bottom:48px;align-items:end}
+.sec-head h2{font-size:clamp(34px,4.6vw,58px);font-weight:800}
+.sec-head .tag{padding-bottom:10px}
+
+/* verilenler / hakkımda */
+.about .grid{display:grid;grid-template-columns:5fr 7fr;gap:56px;align-items:start}
+.photo{position:relative;transform:rotate(-1.5deg);background:#fff;padding:12px 12px 52px;box-shadow:0 18px 40px -18px rgba(30,26,58,.45)}
+.photo img{aspect-ratio:4/5;object-fit:cover;width:100%}
+.photo figcaption{position:absolute;left:16px;bottom:12px;font:700 26px var(--hand);color:var(--ink)}
+.photo::before{content:"";position:absolute;top:-14px;left:50%;width:110px;height:30px;transform:translateX(-50%) rotate(3deg);background:rgba(214,73,60,.22)}
+.about .text{font-size:19px;max-width:36em}
+.about .text p:first-child{font:600 clamp(24px,2.6vw,32px)/1.3 var(--display);letter-spacing:-.015em;color:var(--ink)}
+.u{background:linear-gradient(transparent 62%,rgba(214,73,60,.28) 62%)}
+.verilen{list-style:none;padding:0;margin:28px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1.5px solid var(--ink)}
+.verilen li{padding:16px 0;border-bottom:1px solid var(--line);display:flex;gap:12px;font-weight:500}
+.verilen li:nth-child(odd){padding-right:16px}
+.verilen span{font:500 13px var(--mono);color:var(--indigo);padding-top:3px}
+
+/* çözüm adımları */
+.steps{position:relative;display:grid;gap:0}
+.step{display:grid;grid-template-columns:200px 1fr 1fr;gap:24px;padding:36px 0;border-top:1.5px solid var(--ink);align-items:start}
+.step:last-child{border-bottom:1.5px solid var(--ink)}
+.step .no{font:800 76px/0.9 var(--display);color:transparent;-webkit-text-stroke:1.5px var(--ink);letter-spacing:-.04em}
+.step:hover .no{color:var(--indigo);-webkit-text-stroke-color:var(--indigo)}
+.step .no{transition:color .3s}
+.step h3{font-size:28px;font-weight:700;margin-bottom:10px}
+.step p{color:var(--ink-2);max-width:32em}
+.step ul{margin:0;padding:0;list-style:none}
+.step li{padding:8px 0;border-bottom:1px dashed var(--line);display:flex;gap:10px}
+.step li::before{content:"∠";color:var(--indigo);font-weight:600}
+
+/* eğitimler */
+.dark{background:var(--ink);color:var(--paper);background-image:linear-gradient(rgba(246,243,236,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(246,243,236,.05) 1px,transparent 1px);background-size:28px 28px}
+.dark .tag{color:#b9b4d2}.dark .tag b{background:var(--paper);color:var(--ink)}
+.dark .sec-head p{color:#c9c5dd;max-width:34em;margin:14px 0 0}
+.prog{display:grid;grid-template-columns:repeat(12,1fr);gap:20px}
+.prog article{grid-column:span 6;display:grid;grid-template-columns:1fr;grid-template-rows:auto 1fr;background:rgba(246,243,236,.04);border:1px solid rgba(246,243,236,.16);border-radius:16px;overflow:hidden;transition:border-color .2s,transform .25s}
+.prog article:hover{border-color:var(--paper);transform:translateY(-3px)}
+.prog article.wide{grid-column:span 12;grid-template-columns:minmax(0,1.1fr) 1fr;grid-template-rows:auto}
+.prog img{width:100%;aspect-ratio:16/9;object-fit:cover;background:#2d2852}
+.prog article.wide img{height:100%}
+.prog .body{padding:24px;display:flex;flex-direction:column;gap:10px}
+.prog h3{font-size:24px;font-weight:700}
+.prog .meta{font:500 12.5px var(--mono);color:#b9b4d2}
+.prog p{color:#d6d2e6;font-size:16px;margin:0}
+.prog .row{margin-top:auto;padding-top:14px;display:flex;justify-content:space-between;align-items:center;gap:12px;border-top:1px dashed rgba(246,243,236,.2)}
+.price{font:500 22px var(--mono);font-variant-numeric:tabular-nums}
+.prog a.lnk{color:var(--paper);font-weight:600;text-decoration:none;display:inline-flex;gap:8px;align-items:center;min-height:44px}
+.prog a.lnk:hover{text-decoration:underline;text-underline-offset:4px}
+.prog .note{font:700 24px var(--hand);color:#ff8a7c;transform:rotate(-2deg);display:inline-block}
+.birebir{margin-top:20px;display:flex;flex-wrap:wrap;gap:16px 32px;align-items:center;justify-content:space-between;border:1.5px dashed rgba(246,243,236,.35);border-radius:16px;padding:24px 28px}
+.birebir h3{font-size:26px}
+.birebir p{margin:6px 0 0;color:#c9c5dd}
+.dark .btn-ink{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+.dark .btn-ink:hover{background:#fff}
+
+/* yorum */
+.quote{padding:110px 0}
+.quote blockquote{margin:0 auto;max-width:900px;position:relative}
+.quote blockquote p{font:600 clamp(28px,3.8vw,48px)/1.2 var(--display);letter-spacing:-.02em;text-wrap:balance}
+.quote cite{font-style:normal;font:500 14px var(--mono);color:var(--ink-3)}
+.quote .hand{position:absolute;right:0;bottom:-46px;font-size:30px;transform:rotate(-3deg)}
+.quote .ig{margin-top:22px;display:inline-flex}
+
+/* sss */
+.faq{border-top:1.5px solid var(--ink)}
+.faq dl{margin:0;display:grid;grid-template-columns:1fr 1fr;column-gap:56px}
+.faq .qa{padding:26px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:44px 1fr}
+.faq dt{font:700 21px/1.25 var(--display);letter-spacing:-.01em;grid-column:2}
+.faq dd{margin:8px 0 0;color:var(--ink-2);grid-column:2}
+.faq .qa::before{content:attr(data-n);font:500 13px var(--mono);color:var(--indigo);grid-row:1;padding-top:4px}
+
+/* iletişim */
+.contact .grid{display:grid;grid-template-columns:5fr 7fr;gap:56px}
+.contact h2{font-size:clamp(36px,4.8vw,60px);font-weight:800;margin:14px 0 18px}
+.contact .side p{color:var(--ink-2);font-size:18px}
+.chan{list-style:none;padding:0;margin:28px 0 0;border-top:1.5px solid var(--ink)}
+.chan li{border-bottom:1px solid var(--line)}
+.chan a{display:flex;justify-content:space-between;align-items:center;padding:16px 0;text-decoration:none;font-weight:600;min-height:52px}
+.chan a span{font:500 13px var(--mono);color:var(--ink-3)}
+.chan a:hover{color:var(--indigo)}
+form.paper{background:#fffdf8;border:1.5px solid var(--ink);border-radius:16px;padding:32px;box-shadow:6px 6px 0 var(--ink);display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.f{display:flex;flex-direction:column;gap:6px}
+.f.full{grid-column:1/-1}
+label,.lbl{font:600 14px var(--body)}
+label i{color:var(--pen);font-style:normal}
+input,textarea{font:400 16px var(--body);color:var(--ink);background:var(--paper);border:1.5px solid var(--line);border-radius:10px;padding:12px 14px;min-height:48px;transition:border-color .2s}
+input:focus,textarea:focus{outline:none;border-color:var(--indigo);box-shadow:0 0 0 3px var(--indigo-soft)}
+textarea{min-height:110px;resize:vertical}
+.seg{display:flex;gap:8px}
+.seg label{flex:1;position:relative}
+.seg input{position:absolute;opacity:0;inset:0;min-height:0}
+.seg span{display:flex;justify-content:center;align-items:center;min-height:48px;border:1.5px solid var(--line);border-radius:10px;background:var(--paper);font-weight:500;cursor:pointer}
+.seg input:checked+span{border-color:var(--ink);background:var(--ink);color:var(--paper)}
+.seg input:focus-visible+span{outline:3px solid var(--pen);outline-offset:2px}
+.err{color:var(--pen);font-size:14px;min-height:0}
+.f.bad input{border-color:var(--pen)}
+.form-end{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between}
+.form-end small{color:var(--ink-3);max-width:26em}
+.ok{grid-column:1/-1;font:700 26px var(--hand);color:var(--indigo)}
+
+footer{border-top:1.5px solid var(--ink);padding:36px 0 48px;font-size:14px;color:var(--ink-3)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:16px 28px;justify-content:space-between;align-items:center}
+footer nav{display:flex;flex-wrap:wrap;gap:6px 18px}
+footer a{text-decoration:none}footer a:hover{color:var(--ink);text-decoration:underline}
+
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+
+@media (max-width:960px){
+  .hero .wrap,.about .grid,.contact .grid{grid-template-columns:1fr}
+  .figure{max-width:520px;margin:0 auto}
+  .quiz-card{grid-template-columns:1fr}
+  .answer{grid-column:1}
+  .sec-head{grid-template-columns:1fr;gap:10px}
+  .step{grid-template-columns:90px 1fr;}
+  .step .no{font-size:54px}
+  .step>ul{grid-column:2}
+  .prog article.wide{grid-template-columns:1fr}
+  .faq dl{grid-template-columns:1fr}
+  .photo{max-width:420px}
+}
+@media (max-width:760px){
+  nav.main{display:none;position:absolute;top:68px;left:0;right:0;flex-direction:column;align-items:stretch;background:var(--paper);border-bottom:1.5px solid var(--ink);padding:10px 16px 18px}
+  nav.main.open{display:flex}
+  nav.main a{padding:14px 8px}
+  nav.main a.btn{margin:8px 0 0;justify-content:center}
+  .menu-btn{display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;border:1.5px solid var(--ink);border-radius:10px;background:transparent;cursor:pointer}
+  .wrap{padding:0 16px}
+  .hero{padding-top:32px}
+  .opts{grid-template-columns:1fr}
+  .quiz-card,form.paper{padding:20px;box-shadow:4px 4px 0 var(--ink)}
+  form.paper{grid-template-columns:1fr}
+  .verilen{grid-template-columns:1fr}
+  .verilen li:nth-child(odd){padding-right:0}
+  .step{grid-template-columns:1fr;gap:12px;padding:28px 0}
+  .step>ul{grid-column:1}
+  .prog article{grid-column:span 12}
+  .sec{padding:72px 0 80px}
+  .quote .hand{position:static;display:block;margin-top:18px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .draw{stroke-dashoffset:0}.pop{opacity:1}.reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#icerik">İçeriğe geç</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#" aria-label="HD Geometri ana sayfa">
+      <svg viewBox="0 0 34 34" aria-hidden="true"><rect width="34" height="34" rx="8" fill="#1e1a3a"/><path d="M17 7 28 26H6Z" fill="none" stroke="#f6f3ec" stroke-width="2.2" stroke-linejoin="round"/><path d="M17 7v19" stroke="#f6f3ec" stroke-width="1.2" stroke-dasharray="2 2"/><circle cx="17" cy="7" r="2.6" fill="#d6493c"/></svg>
+      <span>HD Geometri<small>Dilara Hoca</small></span>
+    </a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="menu" aria-label="Menüyü aç">
+      <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M2 5h16M2 10h16M2 15h10" stroke="#1e1a3a" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+    <nav class="main" id="menu" aria-label="Ana menü">
+      <a href="#yontem">Yöntem</a>
+      <a href="#hakkimda">Hakkımda</a>
+      <a href="#egitimler">Eğitimler</a>
+      <a href="#sss">SSS</a>
+      <a class="btn btn-ink" href="#iletisim">Ön görüşme iste</a>
+    </nav>
+  </div>
+</header>
+
+<main id="icerik">
+
+<section class="hero" aria-labelledby="h1">
+  <div class="wrap">
+    <div>
+      <span class="tag"><b>Soru 1</b> TYT · AYT · 9–12. sınıf · Mezun</span>
+      <h1 id="h1">Geometriyi ezberleme. <em>Şekli okumayı</em> öğren.</h1>
+      <p class="lead">Geometride takılmak çoğu zaman yetersizlik değil; şekle nereden bakacağını bilmemek. Dilara Hoca ile birebir ve grup online derslerde soru tiplerini tanıyor, doğru bağlantıyı kuruyor, netini kalıcı olarak artırıyorsun.</p>
+      <div class="acts">
+        <a class="btn btn-ink" href="#iletisim">Ön görüşme iste
+          <svg viewBox="0 0 18 18" aria-hidden="true"><path d="M3 9h12M10 4l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a class="btn btn-line" href="#egitimler">Eğitimleri gör</a>
+      </div>
+    </div>
+
+    <figure class="figure" aria-label="Yüksekliği çizilmiş ABC üçgeni ve kırmızı kalemle notlar">
+      <svg viewBox="0 0 520 450" role="img" aria-hidden="true">
+        <g fill="none" stroke="#1e1a3a" stroke-linecap="round" stroke-linejoin="round">
+          <path class="draw" d="M250 50 L60 390 L480 390 Z" stroke-width="3"/>
+          <path class="draw d2" d="M250 50 L250 390" stroke-width="2"/>
+          <path class="draw d3" d="M250 370 h20 v20" stroke-width="2"/>
+          <path class="draw d3" d="M100 390 A40 40 0 0 0 82 352" stroke="#4a35b0" stroke-width="2.5"/>
+          <path class="draw d3" d="M435 390 A45 45 0 0 1 452 356" stroke="#4a35b0" stroke-width="2.5"/>
+          <path class="draw d3" d="M233 82 A36 36 0 0 0 270 86" stroke="#4a35b0" stroke-width="2.5"/>
+        </g>
+        <g font-family="JetBrains Mono, monospace" font-size="20" fill="#1e1a3a" class="pop">
+          <text x="240" y="32">A</text><text x="34" y="412">B</text><text x="486" y="412">C</text><text x="244" y="420">H</text>
+          <text x="104" y="372" font-size="16" fill="#4a35b0">60°</text>
+          <text x="392" y="374" font-size="16" fill="#4a35b0">45°</text>
+        </g>
+        <g class="pop" style="animation-delay:2.7s">
+          <path d="M300 205 C345 192 380 182 405 165" fill="none" stroke="#d6493c" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M262 214 l26-6 M262 214 l20 14" fill="none" stroke="#d6493c" stroke-width="2.5" stroke-linecap="round"/>
+          <text x="352" y="118" font-family="Caveat, cursive" font-weight="700" font-size="34" fill="#d6493c">yüksekliği çiz,</text>
+          <text x="366" y="152" font-family="Caveat, cursive" font-weight="700" font-size="34" fill="#d6493c" transform="rotate(-3 366 152)">iki özel üçgen!</text>
+          <path d="M60 430 Q160 418 250 428" fill="none" stroke="#d6493c" stroke-width="2" stroke-linecap="round"/>
+          <text x="66" y="447" font-family="Caveat, cursive" font-weight="700" font-size="22" fill="#d6493c">30-60-90 · 45-45-90</text>
+        </g>
+      </svg>
+    </figure>
+  </div>
+</section>
+
+<section class="quiz" aria-labelledby="quiz-h">
+  <div class="wrap">
+    <div class="quiz-card reveal">
+      <div class="q">
+        <span class="tag"><b>Soru 2</b> Kendini işaretle</span>
+        <h2 id="quiz-h" style="margin-top:14px">Geometride şu an neredesin?</h2>
+        <p>Bir şık seç, sana uygun başlangıcı gösterelim.</p>
+      </div>
+      <ul class="opts" role="list">
+        <li><button type="button" aria-pressed="false" data-oneri="Temelden başlayan birebir ders" data-hedef="#iletisim"><span class="harf">A</span>Temelim zayıf, nereden başlayacağımı bilmiyorum</button></li>
+        <li><button type="button" aria-pressed="false" data-oneri="Süper Analiz Programı" data-hedef="#egitimler"><span class="harf">B</span>Konuları biliyorum ama netlerim takıldı</button></li>
+        <li><button type="button" aria-pressed="false" data-oneri="Üçgenler Kampı (Maarif Model)" data-hedef="#egitimler"><span class="harf">C</span>10. sınıfım, üçgenleri oturtmak istiyorum</button></li>
+        <li><button type="button" aria-pressed="false" data-oneri="Birebir ders + Online Kütüphane" data-hedef="#egitimler"><span class="harf">D</span>Mezunum, yeni nesil sorularda zorlanıyorum</button></li>
+      </ul>
+      <p class="answer" aria-live="polite"></p>
+    </div>
+  </div>
+</section>
+
+<section class="sec about" id="hakkimda" aria-labelledby="about-h">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="tag"><b>Verilenler</b> Hakkımda</span>
+      <h2 id="about-h">Soru çözdürmekten önce bakmayı öğretiyorum.</h2>
+    </div>
+    <div class="grid">
+      <figure class="photo reveal">
+        <img src="img/dilara.jpg" alt="Dilara Hoca, gözlüklü ve gülümseyen, arka planda geometrik cisimler" width="640" height="800" loading="lazy">
+        <figcaption>Dilara Hoca</figcaption>
+      </figure>
+      <div class="text reveal">
+        <p>Geometri birçok öğrencinin korktuğu ders. Oysa sorun çoğu zaman yetersizlik değil, geometriyi nasıl düşüneceğini bilmemek.</p>
+        <p>Öğrencilerime yalnız soru çözmeyi değil, geometrinin mantığını anlamayı öğretiyorum. Çünkü geometri ezberlenerek değil, zamanla <span class="u">“görmeyi” öğrenerek</span> gelişir.</p>
+        <p>Birçok öğrenci yanlış yerden başlıyor: zor kaynaklarla ilerlemeye çalışıyor, hızlı sonuç bekliyor ya da eksik temelle devam ediyor. Bir süre sonra motivasyon gidiyor. Ben önce seviyeni görüyor, sonra konuları adım adım oturtacak bir yol haritası çıkarıyorum.</p>
+        <ul class="verilen">
+          <li><span>01</span>Soru tiplerini tanımak</li>
+          <li><span>02</span>Şekli doğru okumak</li>
+          <li><span>03</span>Doğru bağlantıyı kurmak</li>
+          <li><span>04</span>Kendi başına düşünebilmek</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="yontem" aria-labelledby="yontem-h" style="padding-top:24px">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="tag"><b>Çözüm</b> Süreç nasıl ilerliyor?</span>
+      <h2 id="yontem-h">Dört adımda kalıcı net.</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="no">01</div>
+        <div><h3>Eksik analizi</h3><p>İlk derste nerede takıldığını birlikte buluyoruz. Konu eksiği mi, şekil okuma mı, süre mi? Plan buna göre kuruluyor.</p></div>
+        <ul><li>9–12. sınıf</li><li>Mezun öğrenciler</li><li>TYT / AYT hazırlık</li></ul>
+      </div>
+      <div class="step reveal">
+        <div class="no">02</div>
+        <div><h3>Sana özel yol haritası</h3><p>Birebir online derslerde ilerleme planı ve çalışma sistemi seviyene göre hazırlanır; zor kaynağa erken geçilmez.</p></div>
+        <ul><li>Kişisel ilerleme planı</li><li>Haftalık çalışma sistemi</li><li>Düzenli kontrol</li></ul>
+      </div>
+      <div class="step reveal">
+        <div class="no">03</div>
+        <div><h3>Şekli okuma ve bağlantı</h3><p>Sorunun içindeki özel üçgeni, benzerliği, yardımcı çizgiyi görmeyi çalışıyoruz. Çözümü ezberlemek yerine nereden başlayacağını öğreniyorsun.</p></div>
+        <ul><li>TYT-AYT Geometri</li><li>Analitik düşünme</li><li>Problem çözme teknikleri</li></ul>
+      </div>
+      <div class="step reveal">
+        <div class="no">04</div>
+        <div><h3>Yeni nesil soru ve kamp</h3><p>Belirli seviyelerde sistemli grup çalışmaları: temel oluşturma, soru çözüm mantığı ve yeni nesil soru yaklaşımı.</p></div>
+        <ul><li>Yeni nesil soru analizi</li><li>Online kamplar</li><li>Dönemsel grup dersleri</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec dark" id="egitimler" aria-labelledby="egt-h">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="tag"><b>Seçenekler</b> Eğitimler</span>
+      <div>
+        <h2 id="egt-h">Her öğrencinin ihtiyacı farklı.</h2>
+        <p>Birebir dersler, kamplar ve konu bazlı eğitimlerle sana uygun süreci birlikte seçiyoruz.</p>
+      </div>
+    </div>
+    <div class="prog">
+      <article class="wide reveal">
+        <img src="img/kamp-maarif.jpg" alt="Üçgenler Kampı Maarif Model 10. sınıf tanıtım görseli" loading="lazy">
+        <div class="body">
+          <span class="meta">KAMP · 10. SINIF · MAARİF MODEL</span>
+          <h3>Üçgenler Kampı</h3>
+          <p>Yeni müfredata göre üçgenler ünitesini baştan sona, şekil okuma ve soru tipleriyle oturtan kamp.</p>
+          <span class="note">10. sınıflar buradan başlasın</span>
+          <div class="row"><span class="price">₺3.500</span><a class="lnk" href="https://www.hdgeometri.com/online-sessions">Ayrıntılar →</a></div>
+        </div>
+      </article>
+      <article class="reveal">
+        <img src="img/kamp-online.jpg" alt="Üçgenler Kampı online tanıtım görseli" loading="lazy">
+        <div class="body">
+          <span class="meta">KAMP · ONLINE</span>
+          <h3>Üçgenler Kampı (Online)</h3>
+          <p>TYT-AYT için üçgenlerin tamamı, grup halinde ve canlı.</p>
+          <div class="row"><span class="price">₺3.500</span><a class="lnk" href="https://www.hdgeometri.com/online-sessions">Ayrıntılar →</a></div>
+        </div>
+      </article>
+      <article class="reveal">
+        <img src="img/super-analiz.jpg" alt="Süper Analiz Programı tanıtım görseli" loading="lazy">
+        <div class="body">
+          <span class="meta">PROGRAM · ANALİZ</span>
+          <h3>Süper Analiz Programı</h3>
+          <p>Netlerin neden takıldığını bulan, eksiklere göre plan çıkaran program.</p>
+          <div class="row"><span class="price">₺1.500</span><a class="lnk" href="https://www.hdgeometri.com/online-sessions">Ayrıntılar →</a></div>
+        </div>
+      </article>
+      <article class="reveal">
+        <img src="img/kutuphane.jpg" alt="Online Kütüphane tanıtım görseli" loading="lazy">
+        <div class="body">
+          <span class="meta">DİJİTAL · KONU ANLATIMI</span>
+          <h3>Online Kütüphane</h3>
+          <p>Konu bazlı ders kayıtları; istediğin konuyu istediğin zaman tekrar et.</p>
+          <div class="row"><span class="price">₺1.000</span><a class="lnk" href="https://www.hdgeometri.com/online-sessions">Ayrıntılar →</a></div>
+        </div>
+      </article>
+      <article class="reveal" style="grid-template-columns:1fr">
+        <div class="body">
+          <span class="meta">BİREBİR · ONLINE</span>
+          <h3>Birebir ders</h3>
+          <p>Eksik analizi, kişisel plan ve haftalık takip. Ücret seviyeye ve ders sıklığına göre ön görüşmede belirlenir.</p>
+          <div class="row"><span class="price">Görüşmede</span><a class="lnk" href="#iletisim">Ön görüşme iste →</a></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="quote" aria-label="Öğrenci yorumu">
+  <div class="wrap">
+    <blockquote class="reveal">
+      <p>“Dilara Hoca’nın en farklı yanı sadece çözüm göstermemesi. Sorunun mantığını anlamayı öğretiyor.”</p>
+      <cite>— Mezun öğrenci</cite>
+      <span class="hand">tam olarak amaç bu ✓</span>
+      <div><a class="btn btn-line ig" href="https://www.instagram.com/hd_geometri/" rel="noopener">Diğer yorumlar Instagram’da · @hd_geometri</a></div>
+    </blockquote>
+  </div>
+</section>
+
+<section class="sec" id="sss" aria-labelledby="sss-h" style="padding-top:24px">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="tag"><b>Notlar</b> Sık sorulanlar</span>
+      <h2 id="sss-h">Aklındaki sorular.</h2>
+    </div>
+    <div class="faq reveal">
+      <dl>
+        <div class="qa" data-n="01"><dt>Seviyem düşükse derse katılabilir miyim?</dt><dd>Evet. Süreç senin seviyene göre planlanır; temelden başlıyoruz.</dd></div>
+        <div class="qa" data-n="02"><dt>Netler ne zaman artmaya başlar?</dt><dd>Temel mantığı ve soru ilişkilerini kavradığın anda. Ezber yerine bakışı değiştirdiğimiz için artış kalıcı olur.</dd></div>
+        <div class="qa" data-n="03"><dt>Sadece soru çözümü mü yapılıyor?</dt><dd>Hayır. Şekil okuma, bağlantı kurma ve düşünme biçimi üzerinde çalışıyoruz; soru çözümü bunun üstüne gelir.</dd></div>
+        <div class="qa" data-n="04"><dt>Dersler birebir mi?</dt><dd>İkisi de var: birebir dersler ve dönemsel grup dersleri ile kamplar.</dd></div>
+        <div class="qa" data-n="05"><dt>Dersler online mı?</dt><dd>Evet, bütün dersler online. Türkiye’nin her yerinden katılabilirsin.</dd></div>
+        <div class="qa" data-n="06"><dt>Kimler için uygun?</dt><dd>9–12. sınıf öğrencileri ve mezunlar; TYT ve AYT geometriye hazırlananlar.</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="sec contact" id="iletisim" aria-labelledby="ilt-h" style="padding-top:40px">
+  <div class="wrap grid">
+    <div class="side reveal">
+      <span class="tag"><b>Cevap</b> İletişim</span>
+      <h2 id="ilt-h">Seviyeni yaz, yolu birlikte çizelim.</h2>
+      <p>Formu doldur; seviyene uygun ders ya da kamp önerisiyle dönüş yapılır. İstersen Instagram’dan da yazabilirsin.</p>
+      <ul class="chan">
+        <li><a href="mailto:dilarasezikli06@gmail.com">E-posta gönder <span>dilarasezikli06@gmail.com</span></a></li>
+        <li><a href="https://www.instagram.com/hd_geometri/" rel="noopener">Instagram <span>@hd_geometri</span></a></li>
+      </ul>
+    </div>
+    <form class="paper reveal" novalidate>
+      <div class="f"><label for="ad">İsim <i>*</i></label><input id="ad" name="ad" autocomplete="given-name" required><span class="err"></span></div>
+      <div class="f"><label for="soyad">Soyisim <i>*</i></label><input id="soyad" name="soyad" autocomplete="family-name" required><span class="err"></span></div>
+      <div class="f"><label for="eposta">E-posta <i>*</i></label><input id="eposta" name="eposta" type="email" autocomplete="email" required><span class="err"></span></div>
+      <div class="f"><label for="tel">Telefon</label><input id="tel" name="tel" type="tel" autocomplete="tel" inputmode="tel" placeholder="05xx xxx xx xx"><span class="err"></span></div>
+      <fieldset class="f full" style="border:0;padding:0;margin:0">
+        <legend class="lbl" style="margin-bottom:6px">Seviye</legend>
+        <div class="seg">
+          <label><input type="radio" name="seviye" value="Lise" checked><span>Lise (9–12)</span></label>
+          <label><input type="radio" name="seviye" value="Mezun"><span>Mezun</span></label>
+        </div>
+      </fieldset>
+      <div class="f full"><label for="not">Eklemek istediklerin</label><textarea id="not" name="not" placeholder="Örn. TYT geometri netim 4, üçgenlerde takılıyorum."></textarea></div>
+      <div class="form-end">
+        <small>Gönder’e basınca e-posta uygulamanda hazır bir mesaj açılır.</small>
+        <button class="btn btn-ink" type="submit">Gönder</button>
+      </div>
+      <p class="ok" hidden aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 HD Geometri · Dilara Hoca</span>
+    <nav aria-label="Yasal">
+      <a href="https://www.hdgeometri.com/teslimat-koşulları">Teslimat Koşulları</a>
+      <a href="https://www.hdgeometri.com/i̇ptal-i̇ade-politikası">İptal / İade</a>
+      <a href="https://www.hdgeometri.com/mesafeli-satış-sözleşmesi">Mesafeli Satış Sözleşmesi</a>
+      <a href="https://www.hdgeometri.com/gizlilik-politikası">Gizlilik</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+const mb=document.querySelector('.menu-btn'),menu=document.getElementById('menu');
+mb.addEventListener('click',()=>{const o=menu.classList.toggle('open');mb.setAttribute('aria-expanded',o);mb.setAttribute('aria-label',o?'Menüyü kapat':'Menüyü aç')});
+menu.addEventListener('click',e=>{if(e.target.tagName==='A'){menu.classList.remove('open');mb.setAttribute('aria-expanded',false)}});
+
+const opts=document.querySelectorAll('.opts button'),ans=document.querySelector('.answer');
+opts.forEach(b=>b.addEventListener('click',()=>{
+  opts.forEach(x=>x.setAttribute('aria-pressed',x===b));
+  ans.innerHTML='';
+  const h=document.createElement('span');h.className='hand';h.textContent='Önerimiz:';
+  const a=document.createElement('a');a.href=b.dataset.hedef;a.textContent=b.dataset.oneri+' →';
+  ans.append(h,a);
+}));
+
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+const form=document.querySelector('form.paper'),ok=form.querySelector('.ok');
+const kural={ad:v=>v.trim()?'':'İsmini yaz.',soyad:v=>v.trim()?'':'Soyismini yaz.',
+  eposta:v=>/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim())?'':'Geçerli bir e-posta adresi yaz.',
+  tel:v=>!v.trim()||v.replace(/\D/g,'').length>=10?'':'Telefonu alan koduyla yaz ya da boş bırak.'};
+function denetle(inp){const m=kural[inp.name](inp.value);const f=inp.closest('.f');f.classList.toggle('bad',!!m);f.querySelector('.err').textContent=m;inp.setAttribute('aria-invalid',!!m);return !m}
+Object.keys(kural).forEach(n=>form[n].addEventListener('blur',e=>denetle(e.target)));
+form.addEventListener('submit',e=>{
+  e.preventDefault();
+  const kotu=Object.keys(kural).map(n=>form[n]).filter(i=>!denetle(i));
+  if(kotu.length){kotu[0].focus();return}
+  const d=new FormData(form);
+  const govde=`İsim: ${d.get('ad')} ${d.get('soyad')}\nE-posta: ${d.get('eposta')}\nTelefon: ${d.get('tel')||'-'}\nSeviye: ${d.get('seviye')}\n\n${d.get('not')||''}`;
+  location.href='mailto:dilarasezikli06@gmail.com?subject='+encodeURIComponent('Ön görüşme talebi: '+d.get('ad')+' '+d.get('soyad'))+'&body='+encodeURIComponent(govde);
+  ok.hidden=false;ok.textContent='E-posta uygulaman açıldı; mesajı gönder, dönüş yapılacak.';
+});
+</script>
+</body>
+</html>
